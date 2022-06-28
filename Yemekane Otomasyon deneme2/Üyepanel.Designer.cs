@@ -53,7 +53,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.exceldatagrid = new System.Windows.Forms.DataGridView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.üyedatagrid)).BeginInit();
             this.pnldata.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -63,7 +63,7 @@
             this.panel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.exceldatagrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // üyedatagrid
@@ -150,7 +150,7 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.exceldatagrid);
+            this.tabPage2.Controls.Add(this.dataGridView1);
             this.tabPage2.Controls.Add(this.panel3);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -336,13 +336,13 @@
             this.label6.TabIndex = 14;
             this.label6.Text = "Aramak için Üye\r\nbilgileri girin:";
             // 
-            // exceldatagrid
+            // dataGridView1
             // 
-            this.exceldatagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.exceldatagrid.Location = new System.Drawing.Point(11, 236);
-            this.exceldatagrid.Name = "exceldatagrid";
-            this.exceldatagrid.Size = new System.Drawing.Size(773, 180);
-            this.exceldatagrid.TabIndex = 8;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(11, 236);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(773, 180);
+            this.dataGridView1.TabIndex = 8;
             // 
             // Üyepanel
             // 
@@ -363,7 +363,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.exceldatagrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -395,6 +395,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView exceldatagrid;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
