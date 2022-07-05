@@ -368,6 +368,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "Üyepanel";
             this.Text = "Üyeler";
+            this.Load += new System.EventHandler(this.Üyepanel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.üyedatagrid)).EndInit();
             this.pnldata.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
