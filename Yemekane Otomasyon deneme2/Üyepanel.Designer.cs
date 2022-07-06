@@ -39,6 +39,8 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.tbID = new System.Windows.Forms.TextBox();
             this.tbTC = new System.Windows.Forms.TextBox();
             this.tbadSoyad = new System.Windows.Forms.TextBox();
@@ -53,8 +55,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnexcelıceaktar = new System.Windows.Forms.Button();
             this.btnexcel = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.üyedatagrid)).BeginInit();
             this.pnldata.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -203,6 +203,26 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Veriler";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(77, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(24, 16);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "ID:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(29, 82);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 16);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Ad/Soyad:";
+            // 
             // tbID
             // 
             this.tbID.Enabled = false;
@@ -308,61 +328,43 @@
             // 
             // panel3
             // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.Controls.Add(this.btnexcelıceaktar);
             this.panel3.Controls.Add(this.btnexcel);
             this.panel3.Location = new System.Drawing.Point(6, 6);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(5);
-            this.panel3.Size = new System.Drawing.Size(190, 100);
+            this.panel3.Size = new System.Drawing.Size(780, 110);
             this.panel3.TabIndex = 7;
             // 
             // btnexcelıceaktar
             // 
-            this.btnexcelıceaktar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnexcelıceaktar.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnexcelıceaktar.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
             this.btnexcelıceaktar.FlatAppearance.BorderSize = 2;
             this.btnexcelıceaktar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnexcelıceaktar.Location = new System.Drawing.Point(95, 5);
+            this.btnexcelıceaktar.Location = new System.Drawing.Point(5, 55);
             this.btnexcelıceaktar.Name = "btnexcelıceaktar";
             this.btnexcelıceaktar.Padding = new System.Windows.Forms.Padding(1);
-            this.btnexcelıceaktar.Size = new System.Drawing.Size(90, 90);
+            this.btnexcelıceaktar.Size = new System.Drawing.Size(770, 50);
             this.btnexcelıceaktar.TabIndex = 2;
             this.btnexcelıceaktar.Text = "Excel\'i içe Aktar";
             this.btnexcelıceaktar.UseVisualStyleBackColor = true;
             // 
             // btnexcel
             // 
-            this.btnexcel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnexcel.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnexcel.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
             this.btnexcel.FlatAppearance.BorderSize = 2;
             this.btnexcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnexcel.Location = new System.Drawing.Point(5, 5);
             this.btnexcel.Name = "btnexcel";
             this.btnexcel.Padding = new System.Windows.Forms.Padding(1);
-            this.btnexcel.Size = new System.Drawing.Size(90, 90);
+            this.btnexcel.Size = new System.Drawing.Size(770, 50);
             this.btnexcel.TabIndex = 3;
             this.btnexcel.Text = "Excel\'e Aktar";
             this.btnexcel.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(29, 82);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 16);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Ad/Soyad:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(77, 20);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(24, 16);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "ID:";
             // 
             // Üyepanel
             // 
@@ -371,6 +373,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabControl1);
             this.Name = "Üyepanel";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Üyeler";
             this.Load += new System.EventHandler(this.Üyepanel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.üyedatagrid)).EndInit();
