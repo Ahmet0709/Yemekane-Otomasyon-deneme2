@@ -26,7 +26,26 @@ namespace Yemekane_Otomasyon_deneme2
             DataTable tablo = new DataTable();
             adapter.Fill(tablo);
             üyedatagrid.DataSource = tablo;
+            dataGridView1.DataSource = tablo;
             baglanti.Close();
+        }
+
+        void Datagrid1colon()
+        {
+            dataGridView1.Columns[0].HeaderText = "ID";
+            dataGridView1.Columns[1].HeaderText = "Ad/ Soyad";
+            dataGridView1.Columns[2].HeaderText = "TC Kimlik Numarası";
+            dataGridView1.Columns[3].HeaderText = "Birim";
+            dataGridView1.Columns[1].HeaderText = "Görev";
+        }
+
+        void üyegrid()
+        {
+            üyedatagrid.Columns[0].HeaderText = "ID";
+            üyedatagrid.Columns[1].HeaderText = "Ad/ Soyad";
+            üyedatagrid.Columns[2].HeaderText = "TC Kimlik Numarası";
+            üyedatagrid.Columns[3].HeaderText = "Birim";
+            üyedatagrid.Columns[1].HeaderText = "Görev";
         }
 
         public Üyepanel()
@@ -37,6 +56,17 @@ namespace Yemekane_Otomasyon_deneme2
         private void Üyepanel_Load(object sender, EventArgs e)
         {
             uyegetir();
+            Datagrid1colon();
+            üyegrid();
+        }
+
+        private void üyedatagrid_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            tbID.Text = üyedatagrid.CurrentRow.Cells[0].Value.ToString();
+            tbadSoyad.Text = üyedatagrid.CurrentRow.Cells[1].Value.ToString();
+            tbTC.Text = üyedatagrid.CurrentRow.Cells[2].Value.ToString();
+            tbbirim.Text = üyedatagrid.CurrentRow.Cells[3].Value.ToString();
+            tbGörev.Text = üyedatagrid.CurrentRow.Cells[4].Value.ToString();
         }
     }
 }

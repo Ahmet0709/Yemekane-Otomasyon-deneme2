@@ -39,15 +39,13 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.tbID = new System.Windows.Forms.TextBox();
+            this.tbTC = new System.Windows.Forms.TextBox();
+            this.tbadSoyad = new System.Windows.Forms.TextBox();
+            this.tbbirim = new System.Windows.Forms.TextBox();
+            this.tbGörev = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -55,6 +53,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnexcelıceaktar = new System.Windows.Forms.Button();
             this.btnexcel = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.üyedatagrid)).BeginInit();
             this.pnldata.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -76,6 +76,7 @@
             this.üyedatagrid.Name = "üyedatagrid";
             this.üyedatagrid.Size = new System.Drawing.Size(786, 173);
             this.üyedatagrid.TabIndex = 0;
+            this.üyedatagrid.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.üyedatagrid_CellEnter);
             // 
             // pnldata
             // 
@@ -183,15 +184,15 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.tbID);
+            this.groupBox1.Controls.Add(this.tbTC);
+            this.groupBox1.Controls.Add(this.tbadSoyad);
+            this.groupBox1.Controls.Add(this.tbbirim);
+            this.groupBox1.Controls.Add(this.tbGörev);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(8, 6);
             this.groupBox1.Name = "groupBox1";
@@ -200,51 +201,51 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Veriler";
             // 
-            // textBox1
+            // tbID
             // 
-            this.textBox1.Location = new System.Drawing.Point(107, 16);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(150, 23);
-            this.textBox1.TabIndex = 13;
+            this.tbID.Location = new System.Drawing.Point(107, 16);
+            this.tbID.Multiline = true;
+            this.tbID.Name = "tbID";
+            this.tbID.Size = new System.Drawing.Size(150, 23);
+            this.tbID.TabIndex = 13;
             // 
-            // textBox2
+            // tbTC
             // 
-            this.textBox2.Location = new System.Drawing.Point(107, 44);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(150, 23);
-            this.textBox2.TabIndex = 12;
+            this.tbTC.Location = new System.Drawing.Point(107, 44);
+            this.tbTC.Multiline = true;
+            this.tbTC.Name = "tbTC";
+            this.tbTC.Size = new System.Drawing.Size(150, 23);
+            this.tbTC.TabIndex = 12;
             // 
-            // textBox3
+            // tbadSoyad
             // 
-            this.textBox3.Location = new System.Drawing.Point(107, 75);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(150, 23);
-            this.textBox3.TabIndex = 11;
+            this.tbadSoyad.Location = new System.Drawing.Point(107, 75);
+            this.tbadSoyad.Multiline = true;
+            this.tbadSoyad.Name = "tbadSoyad";
+            this.tbadSoyad.Size = new System.Drawing.Size(150, 23);
+            this.tbadSoyad.TabIndex = 11;
             // 
-            // textBox4
+            // tbbirim
             // 
-            this.textBox4.Location = new System.Drawing.Point(107, 106);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(150, 23);
-            this.textBox4.TabIndex = 10;
+            this.tbbirim.Location = new System.Drawing.Point(107, 106);
+            this.tbbirim.Multiline = true;
+            this.tbbirim.Name = "tbbirim";
+            this.tbbirim.Size = new System.Drawing.Size(150, 23);
+            this.tbbirim.TabIndex = 10;
             // 
-            // textBox5
+            // tbGörev
             // 
-            this.textBox5.Location = new System.Drawing.Point(107, 137);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(150, 23);
-            this.textBox5.TabIndex = 9;
+            this.tbGörev.Location = new System.Drawing.Point(107, 137);
+            this.tbGörev.Multiline = true;
+            this.tbGörev.Name = "tbGörev";
+            this.tbGörev.Size = new System.Drawing.Size(150, 23);
+            this.tbGörev.TabIndex = 9;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(54, 144);
+            this.label5.Location = new System.Drawing.Point(53, 144);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(48, 16);
             this.label5.TabIndex = 4;
@@ -254,37 +255,17 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(61, 113);
+            this.label4.Location = new System.Drawing.Point(60, 113);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 16);
             this.label4.TabIndex = 3;
             this.label4.Text = "Birim:";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(51, 82);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 16);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Soyad:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(74, 51);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Ad:";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(17, 20);
+            this.label1.Location = new System.Drawing.Point(16, 51);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 16);
             this.label1.TabIndex = 0;
@@ -360,6 +341,26 @@
             this.btnexcel.Text = "Excel\'e Aktar";
             this.btnexcel.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(29, 82);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 16);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Ad/Soyad:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(77, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(24, 16);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "ID:";
+            // 
             // Üyepanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -400,20 +401,20 @@
         private System.Windows.Forms.Button btnexcelıceaktar;
         private System.Windows.Forms.Button btnexcel;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox tbGörev;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tbID;
+        private System.Windows.Forms.TextBox tbTC;
+        private System.Windows.Forms.TextBox tbadSoyad;
+        private System.Windows.Forms.TextBox tbbirim;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }
