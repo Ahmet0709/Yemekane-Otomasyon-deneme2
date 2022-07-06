@@ -127,6 +127,7 @@
             this.btnekle.TabIndex = 3;
             this.btnekle.Text = "Üye Ekle";
             this.btnekle.UseVisualStyleBackColor = true;
+            this.btnekle.Click += new System.EventHandler(this.btnekle_Click);
             // 
             // tabControl1
             // 
