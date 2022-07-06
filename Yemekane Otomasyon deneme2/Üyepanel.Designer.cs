@@ -113,6 +113,7 @@
             this.btnsil.TabIndex = 2;
             this.btnsil.Text = "Üye Sil";
             this.btnsil.UseVisualStyleBackColor = true;
+            this.btnsil.Click += new System.EventHandler(this.btnsil_Click);
             // 
             // btnekle
             // 

@@ -84,5 +84,16 @@ namespace Yemekane_Otomasyon_deneme2
             baglanti.Close();
             uyegetir();
         }
+
+        private void btnsil_Click(object sender, EventArgs e)
+        {
+            string sorgu = "DELETE FROM Uyeler WHERE ID=@ID";
+            komut = new SqlCommand(sorgu, baglanti);
+            komut.Parameters.AddWithValue("@ID", Convert.ToInt32(tbID.Text));
+            baglanti.Open();
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+            uyegetir();
+        }
     }
 }
