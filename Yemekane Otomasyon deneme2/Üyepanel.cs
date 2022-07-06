@@ -71,7 +71,8 @@ namespace Yemekane_Otomasyon_deneme2
 
         private void btnekle_Click(object sender, EventArgs e)
         {
-            string sorgu = "INSERT INTO Uyeler(Adsoyad, Tckimlikno, Birim, Gorev) VALUES(@Adsoyad, @Tckimlikno, @Birim, @Gorev)";
+            
+            string sorgu = "INSERT INTO Uyeler(Adsoyad, Tckimlikno, Birim, Gorev) VALUES (@Adsoyad, @Tckimlikno, @Birim, @Gorev)";
             komut = new SqlCommand(sorgu, baglanti);
             //komut.Parameters.AddWithValue("@ID", tbID.Text);
             komut.Parameters.AddWithValue("@Adsoyad", tbadSoyad.Text);

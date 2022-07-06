@@ -204,6 +204,7 @@
             // 
             // tbID
             // 
+            this.tbID.Enabled = false;
             this.tbID.Location = new System.Drawing.Point(107, 16);
             this.tbID.Multiline = true;
             this.tbID.Name = "tbID";
