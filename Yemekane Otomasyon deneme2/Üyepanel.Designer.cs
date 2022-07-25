@@ -31,7 +31,7 @@
             this.üyedatagrid = new System.Windows.Forms.DataGridView();
             this.pnldata = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnsil = new System.Windows.Forms.Button();
+            this.btnpasif = new System.Windows.Forms.Button();
             this.btnekle = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -39,11 +39,13 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.tbsoyad = new System.Windows.Forms.TextBox();
             this.tbID = new System.Windows.Forms.TextBox();
             this.tbTC = new System.Windows.Forms.TextBox();
-            this.tbadSoyad = new System.Windows.Forms.TextBox();
+            this.tbad = new System.Windows.Forms.TextBox();
             this.tbbirim = new System.Windows.Forms.TextBox();
             this.tbGörev = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -53,7 +55,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnexcelıceaktar = new System.Windows.Forms.Button();
             this.btnexcel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.üyedatagrid)).BeginInit();
             this.pnldata.SuspendLayout();
@@ -70,6 +71,7 @@
             // 
             // üyedatagrid
             // 
+            this.üyedatagrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.üyedatagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.üyedatagrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.üyedatagrid.Location = new System.Drawing.Point(0, 0);
@@ -92,7 +94,7 @@
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.btnsil);
+            this.panel1.Controls.Add(this.btnpasif);
             this.panel1.Controls.Add(this.btnekle);
             this.panel1.Location = new System.Drawing.Point(594, 6);
             this.panel1.Name = "panel1";
@@ -100,20 +102,20 @@
             this.panel1.Size = new System.Drawing.Size(190, 100);
             this.panel1.TabIndex = 5;
             // 
-            // btnsil
+            // btnpasif
             // 
-            this.btnsil.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnsil.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
-            this.btnsil.FlatAppearance.BorderSize = 2;
-            this.btnsil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnsil.Location = new System.Drawing.Point(95, 5);
-            this.btnsil.Name = "btnsil";
-            this.btnsil.Padding = new System.Windows.Forms.Padding(1);
-            this.btnsil.Size = new System.Drawing.Size(90, 90);
-            this.btnsil.TabIndex = 2;
-            this.btnsil.Text = "Üye Sil";
-            this.btnsil.UseVisualStyleBackColor = true;
-            this.btnsil.Click += new System.EventHandler(this.btnsil_Click);
+            this.btnpasif.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnpasif.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
+            this.btnpasif.FlatAppearance.BorderSize = 2;
+            this.btnpasif.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnpasif.Location = new System.Drawing.Point(95, 5);
+            this.btnpasif.Name = "btnpasif";
+            this.btnpasif.Padding = new System.Windows.Forms.Padding(1);
+            this.btnpasif.Size = new System.Drawing.Size(90, 90);
+            this.btnpasif.TabIndex = 2;
+            this.btnpasif.Text = "Üye Pasifleştir";
+            this.btnpasif.UseVisualStyleBackColor = true;
+            this.btnpasif.Click += new System.EventHandler(this.btnpasif_Click);
             // 
             // btnekle
             // 
@@ -186,11 +188,13 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.tbsoyad);
             this.groupBox1.Controls.Add(this.tbID);
             this.groupBox1.Controls.Add(this.tbTC);
-            this.groupBox1.Controls.Add(this.tbadSoyad);
+            this.groupBox1.Controls.Add(this.tbad);
             this.groupBox1.Controls.Add(this.tbbirim);
             this.groupBox1.Controls.Add(this.tbGörev);
             this.groupBox1.Controls.Add(this.label5);
@@ -198,10 +202,20 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(8, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(306, 177);
+            this.groupBox1.Size = new System.Drawing.Size(306, 193);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Veriler";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.Location = new System.Drawing.Point(50, 110);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(51, 16);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Soyad:";
             // 
             // label3
             // 
@@ -217,11 +231,19 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(29, 82);
+            this.label2.Location = new System.Drawing.Point(73, 79);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 16);
+            this.label2.Size = new System.Drawing.Size(28, 16);
             this.label2.TabIndex = 14;
-            this.label2.Text = "Ad/Soyad:";
+            this.label2.Text = "Ad:";
+            // 
+            // tbsoyad
+            // 
+            this.tbsoyad.Location = new System.Drawing.Point(107, 104);
+            this.tbsoyad.Multiline = true;
+            this.tbsoyad.Name = "tbsoyad";
+            this.tbsoyad.Size = new System.Drawing.Size(150, 23);
+            this.tbsoyad.TabIndex = 16;
             // 
             // tbID
             // 
@@ -240,17 +262,17 @@
             this.tbTC.Size = new System.Drawing.Size(150, 23);
             this.tbTC.TabIndex = 12;
             // 
-            // tbadSoyad
+            // tbad
             // 
-            this.tbadSoyad.Location = new System.Drawing.Point(107, 75);
-            this.tbadSoyad.Multiline = true;
-            this.tbadSoyad.Name = "tbadSoyad";
-            this.tbadSoyad.Size = new System.Drawing.Size(150, 23);
-            this.tbadSoyad.TabIndex = 11;
+            this.tbad.Location = new System.Drawing.Point(107, 75);
+            this.tbad.Multiline = true;
+            this.tbad.Name = "tbad";
+            this.tbad.Size = new System.Drawing.Size(150, 23);
+            this.tbad.TabIndex = 11;
             // 
             // tbbirim
             // 
-            this.tbbirim.Location = new System.Drawing.Point(107, 106);
+            this.tbbirim.Location = new System.Drawing.Point(107, 133);
             this.tbbirim.Multiline = true;
             this.tbbirim.Name = "tbbirim";
             this.tbbirim.Size = new System.Drawing.Size(150, 23);
@@ -258,7 +280,7 @@
             // 
             // tbGörev
             // 
-            this.tbGörev.Location = new System.Drawing.Point(107, 137);
+            this.tbGörev.Location = new System.Drawing.Point(107, 164);
             this.tbGörev.Multiline = true;
             this.tbGörev.Name = "tbGörev";
             this.tbGörev.Size = new System.Drawing.Size(150, 23);
@@ -268,7 +290,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(53, 144);
+            this.label5.Location = new System.Drawing.Point(53, 170);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(48, 16);
             this.label5.TabIndex = 4;
@@ -278,7 +300,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(60, 113);
+            this.label4.Location = new System.Drawing.Point(60, 140);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 16);
             this.label4.TabIndex = 3;
@@ -288,7 +310,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(16, 51);
+            this.label1.Location = new System.Drawing.Point(16, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 16);
             this.label1.TabIndex = 0;
@@ -330,38 +352,23 @@
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.Controls.Add(this.btnexcelıceaktar);
             this.panel3.Controls.Add(this.btnexcel);
             this.panel3.Location = new System.Drawing.Point(6, 6);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(5);
-            this.panel3.Size = new System.Drawing.Size(780, 110);
+            this.panel3.Size = new System.Drawing.Size(780, 62);
             this.panel3.TabIndex = 7;
-            // 
-            // btnexcelıceaktar
-            // 
-            this.btnexcelıceaktar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnexcelıceaktar.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
-            this.btnexcelıceaktar.FlatAppearance.BorderSize = 2;
-            this.btnexcelıceaktar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnexcelıceaktar.Location = new System.Drawing.Point(5, 55);
-            this.btnexcelıceaktar.Name = "btnexcelıceaktar";
-            this.btnexcelıceaktar.Padding = new System.Windows.Forms.Padding(1);
-            this.btnexcelıceaktar.Size = new System.Drawing.Size(770, 50);
-            this.btnexcelıceaktar.TabIndex = 2;
-            this.btnexcelıceaktar.Text = "Excel\'i içe Aktar";
-            this.btnexcelıceaktar.UseVisualStyleBackColor = true;
             // 
             // btnexcel
             // 
-            this.btnexcel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnexcel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnexcel.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
             this.btnexcel.FlatAppearance.BorderSize = 2;
             this.btnexcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnexcel.Location = new System.Drawing.Point(5, 5);
             this.btnexcel.Name = "btnexcel";
             this.btnexcel.Padding = new System.Windows.Forms.Padding(1);
-            this.btnexcel.Size = new System.Drawing.Size(770, 50);
+            this.btnexcel.Size = new System.Drawing.Size(770, 52);
             this.btnexcel.TabIndex = 3;
             this.btnexcel.Text = "Excel\'e Aktar";
             this.btnexcel.UseVisualStyleBackColor = true;
@@ -398,13 +405,12 @@
         private System.Windows.Forms.DataGridView üyedatagrid;
         private System.Windows.Forms.Panel pnldata;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnsil;
+        private System.Windows.Forms.Button btnpasif;
         private System.Windows.Forms.Button btnekle;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnexcelıceaktar;
         private System.Windows.Forms.Button btnexcel;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox tbGörev;
@@ -413,7 +419,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbID;
         private System.Windows.Forms.TextBox tbTC;
-        private System.Windows.Forms.TextBox tbadSoyad;
+        private System.Windows.Forms.TextBox tbad;
         private System.Windows.Forms.TextBox tbbirim;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox textBox6;
@@ -422,5 +428,13 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ıDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tcKimlikNoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soyadDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn birimDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn görevDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox tbsoyad;
     }
 }

@@ -44,5 +44,16 @@ namespace Yemekane_Otomasyon_deneme2.Properties {
                 return ((string)(this["YemekhaneOtomasyonuConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=Sql-Ahmet;Initial Catalog=Yemekhaneotomasyonu;Integrated Security=Tru" +
+            "e")]
+        public string YemekhaneotomasyonuConnectionString1 {
+            get {
+                return ((string)(this["YemekhaneotomasyonuConnectionString1"]));
+            }
+        }
     }
 }

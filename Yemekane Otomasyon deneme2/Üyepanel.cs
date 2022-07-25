@@ -14,21 +14,8 @@ namespace Yemekane_Otomasyon_deneme2
 {
     public partial class Üyepanel : Form
     {
-        SqlConnection baglanti;
-        SqlCommand komut;
-        SqlDataAdapter adapter;
+        YemekhaneotomasyonuEntities1 db = new YemekhaneotomasyonuEntities1();
 
-        void uyegetir()
-        {
-            baglanti = new SqlConnection("server=.; Initial Catalog=YemekhaneOtomasyonu-3; Integrated Security=SSPI");
-            baglanti.Open();
-            adapter = new SqlDataAdapter("SELECT *FROM Uyeler", baglanti);
-            DataTable tablo = new DataTable();
-            adapter.Fill(tablo);
-            üyedatagrid.DataSource = tablo;
-            dataGridView1.DataSource = tablo;
-            baglanti.Close();
-        }
 
         void Datagrid1colon()
         {
@@ -52,48 +39,54 @@ namespace Yemekane_Otomasyon_deneme2
         {
             InitializeComponent();
         }
+         void listele()
+        {
+            üyedatagrid.DataSource = db.Üye.ToList();
+
+        }
 
         private void Üyepanel_Load(object sender, EventArgs e)
         {
-            uyegetir();
-            Datagrid1colon();
-            üyegrid();
+            listele();
         }
 
         private void üyedatagrid_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
-            tbID.Text = üyedatagrid.CurrentRow.Cells[0].Value.ToString();
-            tbadSoyad.Text = üyedatagrid.CurrentRow.Cells[1].Value.ToString();
-            tbTC.Text = üyedatagrid.CurrentRow.Cells[2].Value.ToString();
-            tbbirim.Text = üyedatagrid.CurrentRow.Cells[3].Value.ToString();
-            tbGörev.Text = üyedatagrid.CurrentRow.Cells[4].Value.ToString();
+          /*  tbID.Text = üyedatagrid.CurrentRow.Cells[0].Value.ToString();
+            tbad.Text = üyedatagrid.CurrentRow.Cells[2].Value.ToString();
+            tbsoyad.Text = üyedatagrid.CurrentRow.Cells[3].Value.ToString();
+            tbTC.Text = üyedatagrid.CurrentRow.Cells[1].Value.ToString();
+            tbbirim.Text = üyedatagrid.CurrentRow.Cells[4].Value.ToString();
+            tbGörev.Text = üyedatagrid.CurrentRow.Cells[5].Value.ToString(); */
         }
 
         private void btnekle_Click(object sender, EventArgs e)
         {
-            
-            string sorgu = "INSERT INTO Uyeler(Adsoyad, Tckimlikno, Birim, Gorev) VALUES (@Adsoyad, @Tckimlikno, @Birim, @Gorev)";
-            komut = new SqlCommand(sorgu, baglanti);
-            //komut.Parameters.AddWithValue("@ID", tbID.Text);
-            komut.Parameters.AddWithValue("@Adsoyad", tbadSoyad.Text);
-            komut.Parameters.AddWithValue("@TCkimlikno", tbTC.Text);
-            komut.Parameters.AddWithValue("@Birim", tbbirim.Text);
-            komut.Parameters.AddWithValue("@Gorev", tbGörev.Text);
-            baglanti.Open();
-            komut.ExecuteNonQuery();
-            baglanti.Close();
-            uyegetir();
+
+            Üye uyeler = new Üye();
+            uyeler.Ad = tbad.Text;
+            uyeler.Soyad = tbsoyad.Text;
+            uyeler.Tckimlikno = tbTC.Text;
+            uyeler.Görev = tbGörev.Text;
+            uyeler.Birim = tbbirim.Text;
+            db.Üye.Add(uyeler);
+            db.SaveChanges();
+            listele();
         }
 
-        private void btnsil_Click(object sender, EventArgs e)
+        private void btnpasif_Click(object sender, EventArgs e)
         {
-            string sorgu = "DELETE FROM Uyeler WHERE ID=@ID";
-            komut = new SqlCommand(sorgu, baglanti);
-            komut.Parameters.AddWithValue("@ID", Convert.ToInt32(tbID.Text));
-            baglanti.Open();
-            komut.ExecuteNonQuery();
-            baglanti.Close();
-            uyegetir();
+            
+            
+            
+            
+            
+            
+            /*  int ad = Convert.ToInt32(tbad.Text);
+            var x = db.Üye.Find(ad); 
+            db.Üye.Remove(x); 
+            db.SaveChanges();
+            listele(); */
         }
     }
 }

@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="YemekhaneotomasyonuModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Hareketler">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Tckimlikno" Type="nvarchar" MaxLength="11" />
+          <Property Name="Donem" Type="datetime" />
+        </EntityType>
+        <EntityType Name="İzinler">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Tckimlikno" Type="nvarchar" MaxLength="11" />
+          <Property Name="Donem" Type="datetime" />
+          <Property Name="Yiyebilirmi" Type="bit" />
+        </EntityType>
+        <EntityType Name="Üye">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Tckimlikno" Type="nvarchar" MaxLength="11" />
+          <Property Name="Ad" Type="nvarchar" MaxLength="30" />
+          <Property Name="Soyad" Type="nvarchar" MaxLength="30" />
+          <Property Name="Birim" Type="nvarchar" MaxLength="30" />
+          <Property Name="Görev" Type="nvarchar" MaxLength="30" />
+        </EntityType>
+        <EntityContainer Name="YemekhaneotomasyonuModelStoreContainer">
+          <EntitySet Name="Hareketler" EntityType="Self.Hareketler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="İzinler" EntityType="Self.İzinler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Üye" EntityType="Self.Üye" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="YemekhaneotomasyonuModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Hareketler">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Tckimlikno" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="Donem" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="İzinler">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Tckimlikno" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="Donem" Type="DateTime" Precision="3" />
+          <Property Name="Yiyebilirmi" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Üye">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Tckimlikno" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="Ad" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Soyad" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Birim" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Görev" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="YemekhaneotomasyonuEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Hareketler" EntityType="Self.Hareketler" />
+          <EntitySet Name="İzinler" EntityType="Self.İzinler" />
+          <EntitySet Name="Üye" EntityType="Self.Üye" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="YemekhaneotomasyonuModelStoreContainer" CdmEntityContainer="YemekhaneotomasyonuEntities1">
+          <EntitySetMapping Name="Hareketler">
+            <EntityTypeMapping TypeName="YemekhaneotomasyonuModel.Hareketler">
+              <MappingFragment StoreEntitySet="Hareketler">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Tckimlikno" ColumnName="Tckimlikno" />
+                <ScalarProperty Name="Donem" ColumnName="Donem" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="İzinler">
+            <EntityTypeMapping TypeName="YemekhaneotomasyonuModel.İzinler">
+              <MappingFragment StoreEntitySet="İzinler">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Tckimlikno" ColumnName="Tckimlikno" />
+                <ScalarProperty Name="Donem" ColumnName="Donem" />
+                <ScalarProperty Name="Yiyebilirmi" ColumnName="Yiyebilirmi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Üye">
+            <EntityTypeMapping TypeName="YemekhaneotomasyonuModel.Üye">
+              <MappingFragment StoreEntitySet="Üye">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Tckimlikno" ColumnName="Tckimlikno" />
+                <ScalarProperty Name="Ad" ColumnName="Ad" />
+                <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+                <ScalarProperty Name="Birim" ColumnName="Birim" />
+                <ScalarProperty Name="Görev" ColumnName="Görev" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
